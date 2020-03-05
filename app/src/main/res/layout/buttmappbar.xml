@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/my_custom_single_line"/>
+    <ImageButton
+        android:id="@+id/buttom_appbar_category_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="135dp"
+        android:background="@drawable/ic_category_idle"/>
+    <TextView
+        android:id="@+id/buttom_appbar_category_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="130dp"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:textColor="#000"
+        android:text="دسته ها"/>
+    <ImageButton
+        android:id="@+id/buttom_appbar_receipt_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/ic_receipt_idle"/>
+    <TextView
+        android:id="@+id/buttom_appbar_receipt_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="25dp"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:textColor="#000"
+        android:text="دسته ها"/>
+    <ImageButton
+        android:id="@+id/buttom_appbar_home_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/ic_home_idle"/>
+
+    <TextView
+        android:id="@+id/buttom_appbar_home_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="32dp"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:textColor="#000"
+        android:text="خانه"/>
+    <ImageButton
+        android:id="@+id/buttom_appbar_search_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="135dp"
+        android:background="@drawable/ic_search_idle"/>
+    <TextView
+        android:id="@+id/buttom_appbar_search_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="128dp"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:textColor="#000"
+        android:text="جستجو"/>
+
+</FrameLayout>
+
+
+</androidx.cardview.widget.CardView>

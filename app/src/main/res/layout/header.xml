@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#048509"
+    android:layout_height="130dp">
+<ImageButton
+    android:layout_width="160dp"
+    android:layout_height="90dp"
+    android:layout_gravity="center"
+    android:background="@drawable/pinket_white_transparent"/>
+</FrameLayout>
