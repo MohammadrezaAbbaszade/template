@@ -2,15 +2,17 @@ package com.example.pinket.views
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.fragment.app.Fragment
 import com.example.pinket.R
 import kotlinx.android.synthetic.main.buttmappbar.*
+import kotlinx.android.synthetic.main.main_toolbar.*
 
 class MainActivity : AppCompatActivity() {
     val fm by lazy {
         supportFragmentManager
     }
-    var clicked=false
+    var clicked = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -24,42 +26,51 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun setListeners(){
+    private fun setListeners() {
         buttom_appbar_home_image_view.setOnClickListener {
-            clicked=!clicked
-
-                buttom_appbar_search_image_view.setBackgroundResource(R.drawable.ic_search_idle)
-                buttom_appbar_receipt_image_view.setBackgroundResource(R.drawable.ic_receipt_idle)
-                buttom_appbar_category_image_view.setBackgroundResource(R.drawable.ic_category_idle)
+            clicked = !clicked
+            buttom_appbar_search_image_view.setBackgroundResource(R.drawable.ic_search_idle)
+            buttom_appbar_receipt_image_view.setBackgroundResource(R.drawable.ic_receipt_idle)
+            buttom_appbar_category_image_view.setBackgroundResource(R.drawable.ic_category_idle)
             it.setBackgroundResource(R.drawable.ic_home_active)
+            if (!MainFragment.newInstance().isVisible) {
+                fm.beginTransaction().replace(R.id.fragment_container, MainFragment.newInstance())
+                    .commit()
+            }
 
         }
         buttom_appbar_search_image_view.setOnClickListener {
-            clicked=!clicked
+            clicked = !clicked
 
-                buttom_appbar_home_image_view.setBackgroundResource(R.drawable.ic_home_idle)
-                buttom_appbar_category_image_view.setBackgroundResource(R.drawable.ic_category_idle)
-                buttom_appbar_receipt_image_view.setBackgroundResource(R.drawable.ic_receipt_idle)
-                it.setBackgroundResource(R.drawable.ic_search_active)
+            buttom_appbar_home_image_view.setBackgroundResource(R.drawable.ic_home_idle)
+            buttom_appbar_category_image_view.setBackgroundResource(R.drawable.ic_category_idle)
+            buttom_appbar_receipt_image_view.setBackgroundResource(R.drawable.ic_receipt_idle)
+            it.setBackgroundResource(R.drawable.ic_search_active)
+            main_toolbar.visibility = View.GONE
+            fm.beginTransaction().replace(R.id.fragment_container, SearchFragment.newInstance())
+                .commit()
+
 
         }
         buttom_appbar_category_image_view.setOnClickListener {
-            clicked=!clicked
+            clicked = !clicked
 
-                buttom_appbar_home_image_view.setBackgroundResource(R.drawable.ic_home_idle)
-                buttom_appbar_search_image_view.setBackgroundResource(R.drawable.ic_search_idle)
-                buttom_appbar_receipt_image_view.setBackgroundResource(R.drawable.ic_receipt_idle)
-                it.setBackgroundResource(R.drawable.ic_category_active)
+            buttom_appbar_home_image_view.setBackgroundResource(R.drawable.ic_home_idle)
+            buttom_appbar_search_image_view.setBackgroundResource(R.drawable.ic_search_idle)
+            buttom_appbar_receipt_image_view.setBackgroundResource(R.drawable.ic_receipt_idle)
+            it.setBackgroundResource(R.drawable.ic_category_active)
 
         }
         buttom_appbar_receipt_image_view.setOnClickListener {
-            clicked=!clicked
+            clicked = !clicked
 
-                buttom_appbar_home_image_view.setBackgroundResource(R.drawable.ic_home_idle)
-                buttom_appbar_search_image_view.setBackgroundResource(R.drawable.ic_search_idle)
-                buttom_appbar_category_image_view.setBackgroundResource(R.drawable.ic_category_idle)
-                it.setBackgroundResource(R.drawable.ic_receipt_active)
+            buttom_appbar_home_image_view.setBackgroundResource(R.drawable.ic_home_idle)
+            buttom_appbar_search_image_view.setBackgroundResource(R.drawable.ic_search_idle)
+            buttom_appbar_category_image_view.setBackgroundResource(R.drawable.ic_category_idle)
+            it.setBackgroundResource(R.drawable.ic_receipt_active)
         }
 
+
     }
+
 }
