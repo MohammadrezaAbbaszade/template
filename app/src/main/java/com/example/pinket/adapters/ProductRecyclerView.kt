@@ -14,11 +14,7 @@ class ProductRecyclerView(val context: Context, var productList: List<Int>) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.products_items, parent, false)
-        val viewHolder =
-            ViewHolder(
-                view,
-                context
-            )
+        val viewHolder = ViewHolder(view, context)
         return viewHolder
     }
 

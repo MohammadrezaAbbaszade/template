@@ -16,6 +16,7 @@ import android.widget.Toast
 import com.example.pinket.R
 import kotlinx.android.synthetic.main.fragment_search.*
 import kotlinx.android.synthetic.main.fragment_search.view.*
+import kotlinx.android.synthetic.main.search_fragment_toolbar.view.*
 
 /**
  * A simple [Fragment] subclass.
@@ -54,15 +55,19 @@ class SearchFragment : Fragment() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 if (s?.length!! > 1) {
                     view.search_fragment_close.setVisibility(View.VISIBLE)
+                    view.search_fragment_barcode.setVisibility(View.GONE)
 
                 } else {
-                    view.search_fragment_barcode.setVisibility(View.GONE)
+                    view.search_fragment_barcode.setVisibility(View.VISIBLE)
+                    view.search_fragment_close.setVisibility(View.GONE)
                 }
             }
 
         })
         view.search_fragment_close.setOnClickListener {
             view.search_fragment_edit_text.setText("")
+            view.search_fragment_barcode.setVisibility(View.VISIBLE)
+            view.search_fragment_close.setVisibility(View.GONE)
 
         }
         view.search_fragment_edit_text.setOnEditorActionListener(object :

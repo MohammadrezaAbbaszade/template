@@ -7,71 +7,7 @@
     tools:context=".views.SearchFragment">
 
 
-    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize">
-
-        <FrameLayout
-            android:layout_width="330dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center|right"
-            android:layout_marginRight="25dp"
-            android:background="@drawable/cutom_search_box">
-
-            <ImageButton
-                android:id="@+id/search_fragment_barcode"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|right"
-                android:layout_marginRight="7dp"
-                android:background="@drawable/ic_barcode_black"
-                android:tint="@color/green_transparent" />
-
-            <ImageButton
-                android:id="@+id/search_fragment_close"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ic_close_gray"
-                android:layout_gravity="center|right"
-                android:focusable="true"
-                android:visibility="gone"
-                android:layout_marginRight="7dp"
-                android:tint="@color/green_transparent"
-                 />
-
-            <EditText
-                android:id="@+id/search_fragment_edit_text"
-                android:layout_width="250dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:background="@null"
-                android:hint="جستجوی محصول"
-                android:imeOptions="actionSearch"
-                android:inputType="text"
-                android:maxLines="1"
-                android:textDirection="rtl"
-                android:textSize="12sp" />
-
-            <ImageButton
-                android:id="@+id/search_fragment_search"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|left"
-                android:layout_marginLeft="6dp"
-                android:background="@drawable/ic_search_idle" />
-
-        </FrameLayout>
-
-
-        <ImageButton
-            android:id="@+id/search_fragment_basket"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left|center"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/ic_basket" />
-
-    </androidx.cardview.widget.CardView>
+<include layout="@layout/search_fragment_toolbar"/>
 
     <!-- TODO: Update blank fragment layout -->
 
