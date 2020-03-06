@@ -1,4 +1,4 @@
-package com.example.pinket
+package com.example.pinket.views
 
 
 import android.os.Bundle
@@ -6,9 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.smarteist.autoimageslider.IndicatorAnimations
+import com.example.pinket.R
+import com.example.pinket.adapters.ProductRecyclerView
+import com.example.pinket.adapters.SliderAdapter
 import com.smarteist.autoimageslider.SliderView
-import kotlinx.android.synthetic.main.fragment_main.*
 import kotlinx.android.synthetic.main.fragment_main.view.*
 
 /**
@@ -49,12 +50,14 @@ class MainFragment : Fragment() {
     }
 
     private fun initSliderAdapter(images: List<Int>) {
-        sliderAdapter = SliderAdapter(context!!, images)
+        sliderAdapter =
+            SliderAdapter(context!!, images)
         sliderView.sliderAdapter = sliderAdapter
     }
 
     private fun initRecyclerView(images: List<Int>,view:View) {
-        productRecyclerView = ProductRecyclerView(context!!, images)
+        productRecyclerView =
+            ProductRecyclerView(context!!, images)
         view.fragment_main_newest_product_recycler.adapter = productRecyclerView
         view.fragment_main_rated_product_recycler.adapter = productRecyclerView
         view.fragment_main_popular_product_recycler.adapter = productRecyclerView

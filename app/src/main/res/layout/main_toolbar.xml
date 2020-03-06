@@ -5,6 +5,7 @@
     >
 
     <ImageButton
+        android:id="@+id/main_toolbar_menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right|center"
@@ -12,6 +13,7 @@
         android:background="@drawable/ic_menu" />
 
     <TextView
+        android:id="@+id/main_toolbar_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -19,6 +21,7 @@
         android:textColor="@color/custom_green" />
 
     <ImageButton
+        android:id="@+id/main_toolbar_basket"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="left|center"

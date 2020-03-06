@@ -1,9 +1,9 @@
-package com.example.pinket
+package com.example.pinket.views
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import kotlinx.android.synthetic.main.activity_main.*
+import com.example.pinket.R
 import kotlinx.android.synthetic.main.buttmappbar.*
 
 class MainActivity : AppCompatActivity() {
@@ -16,7 +16,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setListeners()
         val fragment: Fragment? = fm.findFragmentById(R.id.fragment_container)
-        fm.beginTransaction().replace(R.id.fragment_container, MainFragment.newInstance()).commit()
+        fm.beginTransaction().replace(
+            R.id.fragment_container,
+            MainFragment.newInstance()
+        ).commit()
 
 
     }

@@ -1,12 +1,11 @@
-package com.example.pinket
+package com.example.pinket.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.pinket.R
 import kotlinx.android.synthetic.main.products_items.view.*
 
 class ProductRecyclerView(val context: Context, var productList: List<Int>) :
@@ -15,7 +14,11 @@ class ProductRecyclerView(val context: Context, var productList: List<Int>) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.products_items, parent, false)
-        val viewHolder = ViewHolder(view, context)
+        val viewHolder =
+            ViewHolder(
+                view,
+                context
+            )
         return viewHolder
     }
 
