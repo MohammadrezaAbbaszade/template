@@ -76,7 +76,13 @@ class MainActivity : AppCompatActivity() {
         }
         buttom_appbar_receipt_image_view.setOnClickListener {
             clicked = !clicked
-
+            main_toolbar.visibility = View.VISIBLE
+            if (!CustomersItemsFragment.newInstance().isVisible) {
+                fm.popBackStack()
+                fm.beginTransaction().replace(R.id.fragment_container, CustomersItemsFragment.newInstance())
+                    .addToBackStack(null)
+                    .commit()
+            }
             buttom_appbar_home_image_view.setBackgroundResource(R.drawable.ic_home_idle)
             buttom_appbar_search_image_view.setBackgroundResource(R.drawable.ic_search_idle)
             buttom_appbar_category_image_view.setBackgroundResource(R.drawable.ic_category_idle)

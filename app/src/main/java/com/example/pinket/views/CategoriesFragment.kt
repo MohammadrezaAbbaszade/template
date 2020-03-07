@@ -34,7 +34,7 @@ class CategoriesFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_categories, container, false)
         val recyclerViewImages = ArrayList<Int>()
-        for(i in 1..10){
+        for(i in 1..4){
             recyclerViewImages.add(R.drawable.digikala)
         }
         initRecyclerView(recyclerViewImages,view)
