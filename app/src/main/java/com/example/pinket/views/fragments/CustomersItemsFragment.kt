@@ -1,4 +1,4 @@
-package com.example.pinket.views
+package com.example.pinket.views.fragments
 
 
 import android.os.Bundle
@@ -11,7 +11,6 @@ import androidx.viewpager.widget.ViewPager
 
 import com.example.pinket.R
 import com.google.android.material.tabs.TabLayout
-import kotlinx.android.synthetic.main.fragment_customers_items.*
 import kotlinx.android.synthetic.main.fragment_customers_items.view.*
 
 /**
@@ -24,7 +23,8 @@ class CustomersItemsFragment : Fragment() {
     companion object {
         fun newInstance(): CustomersItemsFragment {
             val args = Bundle()
-            val fragment = CustomersItemsFragment()
+            val fragment =
+                CustomersItemsFragment()
             fragment.arguments = args
             return fragment
         }

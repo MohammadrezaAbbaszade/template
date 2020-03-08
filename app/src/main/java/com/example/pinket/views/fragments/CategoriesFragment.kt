@@ -1,4 +1,4 @@
-package com.example.pinket.views
+package com.example.pinket.views.fragments
 
 
 import android.os.Bundle
@@ -21,7 +21,8 @@ class CategoriesFragment : Fragment() {
     companion object {
         fun newInstance(): CategoriesFragment {
             val args = Bundle()
-            val fragment = CategoriesFragment()
+            val fragment =
+                CategoriesFragment()
             fragment.arguments = args
             return fragment
         }

@@ -1,4 +1,4 @@
-package com.example.pinket.views
+package com.example.pinket.views.fragments
 
 
 import android.os.Bundle
@@ -14,8 +14,6 @@ import android.widget.TextView
 import android.widget.Toast
 
 import com.example.pinket.R
-import kotlinx.android.synthetic.main.fragment_search.*
-import kotlinx.android.synthetic.main.fragment_search.view.*
 import kotlinx.android.synthetic.main.search_fragment_toolbar.view.*
 
 /**

@@ -1,4 +1,4 @@
-package com.example.pinket.views
+package com.example.pinket.views.fragments.accounts_related_fragments
 
 
 import android.os.Bundle
@@ -12,13 +12,14 @@ import com.example.pinket.R
 /**
  * A simple [Fragment] subclass.
  */
-class AccountFragment : Fragment() {
+class AddressFragment : Fragment() {
 
 
     companion object {
-        fun newInstance(): AccountFragment {
+        fun newInstance(): AddressFragment {
             val args = Bundle()
-            val fragment = AccountFragment()
+            val fragment =
+                AddressFragment()
             fragment.arguments = args
             return fragment
         }
@@ -28,7 +29,10 @@ class AccountFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_account, container, false)
+        val view= inflater.inflate(R.layout.fragment_address, container, false)
+
+
+        return view
     }
 
 

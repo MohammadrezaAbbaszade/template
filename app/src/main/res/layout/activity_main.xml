@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="start"
     android:fitsSystemWindows="true"
-    tools:context=".views.MainActivity"
+    tools:context=".views.activities.MainActivity"
     tools:openDrawer="end">
     <include layout="@layout/appbar_and_container" />
 

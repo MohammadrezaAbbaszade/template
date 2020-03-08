@@ -17,8 +17,9 @@
             android:layout_gravity="right|center"
             android:tint="@color/green"
             android:padding="8dp"
+            app:srcCompat="@drawable/ic_back"
             android:layout_marginRight="10dp"
-            android:background="@drawable/ic_back" />
+            android:background="?attr/selectableItemBackgroundBorderless" />
 
         <TextView
             android:id="@+id/account_toolbar_title"

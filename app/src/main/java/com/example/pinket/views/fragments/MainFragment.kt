@@ -1,4 +1,4 @@
-package com.example.pinket.views
+package com.example.pinket.views.fragments
 
 
 import android.os.Bundle
