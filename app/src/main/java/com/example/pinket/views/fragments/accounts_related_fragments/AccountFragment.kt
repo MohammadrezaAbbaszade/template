@@ -51,6 +51,14 @@ class AccountFragment : Fragment() {
                 ?.addToBackStack(null)
                 ?.commit()
         }
+        view.account_toolbar_financial.setOnClickListener {
+            activity?.supportFragmentManager?.beginTransaction()
+                ?.replace(R.id.account_container,
+                    FinancialFragment.newInstance()
+                )
+                ?.addToBackStack(null)
+                ?.commit()
+        }
         return view
     }
 

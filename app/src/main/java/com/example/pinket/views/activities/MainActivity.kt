@@ -35,7 +35,10 @@ class MainActivity : AppCompatActivity() {
             R.id.fragment_container,
             MainFragment.newInstance())
             .commit()
-
+        main_toolbar_basket.setOnClickListener {
+            val intent=ShopBagActivity.newIntent(this)
+            startActivity(intent)
+        }
 
     }
 
