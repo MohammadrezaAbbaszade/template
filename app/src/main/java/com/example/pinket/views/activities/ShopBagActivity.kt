@@ -13,7 +13,7 @@ class ShopBagActivity : AppCompatActivity() {
     }
     companion object {
         fun newIntent(context: Context): Intent {
-            val intent = Intent(context, AccountActivity::class.java)
+            val intent = Intent(context, ShopBagActivity::class.java)
             return intent
         }
     }

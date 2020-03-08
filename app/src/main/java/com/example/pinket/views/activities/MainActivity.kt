@@ -119,6 +119,11 @@ private fun setMenuItemsListeners() {
                     val intent=AccountActivity.newIntent(this@MainActivity,NumbersOfFragments.ACOCOUNT_FRAGMENT.name)
                     startActivity(intent)
                 }
+                R.id.account_payment->{
+
+                    val intent=AccountActivity.newIntent(this@MainActivity,NumbersOfFragments.PAYMENT_RESULT_FRAGMENT.name)
+                    startActivity(intent)
+                }
             }
 
             return true
